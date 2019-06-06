@@ -1,0 +1,106 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                xmlns:CustomFont="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <RelativeLayout
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_margin="@dimen/activity_horizontal_margin">
+
+            <com.smartfarming.screenrender.view.CustomFontTextView
+                    android:id="@+id/tvTextHyperlink"
+                    style="@style/HTMLDescriptionTextStyle"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text=""
+                    android:gravity="center_vertical"
+                    android:padding="10dp"/>
+
+
+            <com.smartfarming.screenrender.view.CustomFontTextView
+                    android:id="@+id/tvQuestion"
+                    style="@style/HTMLTitleTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_below="@id/tvTextHyperlink"
+                    android:layout_marginTop="10dp"
+                    android:visibility="gone"
+                    CustomFont:fontName="mangal.ttf"/>
+
+            <LinearLayout
+                    android:id="@+id/btnLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/tvQuestion"
+                    android:visibility="gone">
+
+                <include
+                        layout="@layout/layout_yes_no_change"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"></include>
+
+            </LinearLayout>
+
+            <com.smartfarming.screenrender.view.CustomFontTextView
+                    android:id="@+id/tvPlzRate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/btnLayout"
+                    android:layout_marginTop="20dp"
+                    android:layout_centerInParent="true"
+                    style="@style/HTMLDescriptionTextStyle"
+                    android:text=""/>
+
+
+            <RatingBar
+                    android:id="@+id/viewRatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvPlzRate"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="20dp"
+                    android:scaleX="0.5"
+                    android:scaleY="0.5"/>
+
+            <LinearLayout
+                    android:id="@+id/llRating"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@id/viewRatingBar"
+                    android:orientation="horizontal"
+                    android:padding="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_centerInParent="true">
+
+                <ImageView
+                        android:id="@+id/ivComment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_message_black_24dp"/>
+
+                <com.smartfarming.screenrender.view.CustomFontTextView
+                        android:id="@+id/tvComment"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/leave_comment"
+                        android:singleLine="false"
+                        style="@style/HTMLDescriptionTextStyle"
+                        android:gravity="center"/>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

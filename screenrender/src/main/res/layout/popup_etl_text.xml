@@ -1,0 +1,47 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:CustomFont="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_gravity="center"
+              android:orientation="vertical">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+        <com.smartfarming.screenrender.view.CustomFontTextView
+                android:id="@+id/tv_dialog_title"
+                style="@style/HTMLTitleTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textSize="16sp"
+                CustomFont:fontName="mangal.ttf"/>
+
+        <com.smartfarming.screenrender.view.CustomFontTextView
+                android:id="@+id/tv_dialog_description"
+                style="@style/HTMLDescriptionTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:text=""
+                android:textSize="16sp"
+                CustomFont:fontName="mangal.ttf"/>
+
+
+        <Button
+                android:id="@+id/btnBack"
+                style="@style/ButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="Back"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

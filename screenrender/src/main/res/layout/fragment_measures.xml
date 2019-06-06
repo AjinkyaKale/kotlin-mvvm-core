@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <!--<android.support.design.widget.TabLayout
+        android:id="@+id/tab_layout_white_fly"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/colorLightGrey"
+        android:elevation="6dp"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:tabBackground="@drawable/tab_color_selector"
+        app:tabSelectedTextColor="@color/colorDarkGrey"
+        app:tabTextColor="@color/colorDarkGrey" />-->
+
+
+    <!--  <com.astuetz.PagerSlidingTabStrip
+          android:id="@+id/tabs"
+          android:layout_width="match_parent"
+          android:layout_height="?attr/actionBarSize"
+          android:background="@color/colorLightGrey"
+          app1:pstsShouldExpand="true"
+          app1:pstsIndicatorColor="@color/colorPrimaryDark"
+          app1:pstsIndicatorHeight="6dp"
+          app1:pstsTabTextColor="@color/colorDarkGrey"
+          app1:pstsUnderlineColor="@color/colorPrimary"
+          app1:pstsUnderlineHeight="2dp" />-->
+
+
+    <android.support.design.widget.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabMode="fixed"
+            app:tabIndicatorColor="@color/colorPrimary"
+            app:tabIndicatorHeight="5dp"
+            style="@style/TabLayoutStyle"
+            android:background="@color/colorLightGrey"
+            app:tabGravity="fill"/>
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="2dp" android:background="@color/colorPrimary"/>
+
+    <android.support.v4.view.ViewPager
+            android:id="@+id/view_pager_white_fly"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    </android.support.v4.view.ViewPager>
+
+</LinearLayout>

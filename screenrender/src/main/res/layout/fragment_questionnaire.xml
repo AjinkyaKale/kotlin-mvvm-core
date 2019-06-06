@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+
+    <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8"
+            android:weightSum="1"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+        <ImageView
+                android:id="@+id/ivImage"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/image_size"
+                android:src="@drawable/ic_default"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:visibility="visible"/>
+
+
+        <com.smartfarming.screenrender.view.CustomFontTextView
+                android:id="@+id/tvImageName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:gravity="center|top"
+                android:padding="3dp"
+                android:textColor="@color/colorLightGreyText"
+                android:text=""
+                android:layout_below="@+id/ivImage"/>
+
+        <RelativeLayout
+                android:id="@+id/rlQue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/tvImageName">
+
+            <ImageView
+                    android:id="@+id/iv_photo_identification_left_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:padding="8dip"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/ic_previous_arrow"
+                    android:layout_gravity="center"/>
+
+            <com.smartfarming.screenrender.view.CustomFontTextView
+                    android:id="@+id/tvQuestion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/HTMLTitleTextStyle"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_toRightOf="@+id/iv_photo_identification_left_arrow"
+                    android:layout_toLeftOf="@+id/iv_photo_identification_right_arrow"/>
+
+            <ImageView
+                    android:id="@+id/iv_photo_identification_right_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:padding="8dip"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/ic_next_arrow"/>
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_below="@+id/rlQue"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp">
+
+            <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/btnLeft"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:background="@color/colorRed"
+                    style="@style/QuestionButtonStyle"/>
+
+            <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/btnCenter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/yellow"
+                    style="@style/QuestionButtonStyle"/>
+
+            <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/btnRight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:background="@color/colorGreen"
+                    style="@style/QuestionButtonStyle"/>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</ScrollView>

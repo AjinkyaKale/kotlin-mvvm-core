@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical" android:layout_width="match_parent"
+                android:layout_height="match_parent" android:background="@color/white">
+
+
+    <ImageView
+            android:id="@+id/img_substage_stage_wise_gap"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/image_size"
+            android:src="@drawable/ic_default"
+            android:scaleType="fitXY"/>
+
+    <ListView
+            android:id="@+id/listview_sub_stages"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/img_substage_stage_wise_gap"></ListView>
+</RelativeLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:CustomFont="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <com.smartfarming.screenrender.view.CustomFontTextView
+            android:id="@+id/txt_title"
+            style="@style/HTMLTitleTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="left|center_vertical"
+            android:padding="1dp"
+            android:text=""
+            CustomFont:fontName="mangal.ttf"/>
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp" android:background="@color/colorLightGreyText"/>
+
+</LinearLayout>

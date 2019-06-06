@@ -1,0 +1,61 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              xmlns:CustomFont="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:orientation="vertical">
+
+            <include
+                    android:id="@+id/include"
+                    layout="@layout/layout_pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+
+            <com.smartfarming.screenrender.view.CustomFontTextView
+                    android:id="@+id/tvDescription"
+                    style="@style/HTMLDescriptionTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:text=""/>
+
+            <com.smartfarming.screenrender.view.CustomFontTextView
+                    android:id="@+id/tvQuestion"
+                    style="@style/HTMLTitleTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    CustomFont:fontName="mangal.ttf"/>
+
+            <LinearLayout
+                    android:id="@+id/btnLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:visibility="gone">
+
+                <include
+                        layout="@layout/layout_yes_no_change"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"></include>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

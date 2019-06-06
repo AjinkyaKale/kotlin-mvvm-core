@@ -1,0 +1,90 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:CustomFont="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+        <LinearLayout
+                android:id="@+id/llc_top_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:orientation="vertical">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                <com.smartfarming.screenrender.view.CustomFontTextView
+                        android:id="@+id/tv_etl_reached_title"
+                        style="@style/HTMLTitleTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.9"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="8dp"
+                        android:text=""
+                        CustomFont:fontName="mangal.ttf"/>
+
+                <ImageView
+                        android:id="@+id/ivMore_Info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:src="@drawable/ic_info"/>
+
+            </LinearLayout>
+
+            <!-- <com.smartfarming.screenrender.view.CustomFontTextView
+                 android:id="@+id/tv_etl_reached_pest_name"
+                 style="@style/HTMLTitleTextStyle"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:gravity="top|center_vertical"
+                 android:linksClickable="true"
+                 android:paddingLeft="8dp"
+                 android:layout_marginBottom="5dp"
+                 android:textColor="@color/colorLightGreyText"
+                 android:text=""
+                 CustomFont:fontName="mangal.ttf" />
+ -->
+
+            <include
+                    android:id="@+id/include"
+                    layout="@layout/layout_pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></include>
+
+
+            <com.smartfarming.screenrender.view.CustomFontTextView
+                    android:id="@+id/tv_etl_reached_description"
+                    style="@style/HTMLDescriptionTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:linksClickable="true"
+                    android:text=""
+                    CustomFont:fontName="mangal.ttf"/>
+
+
+        </LinearLayout>
+
+
+        <include
+                layout="@layout/layout_yes_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="16dip"
+                android:layout_marginTop="16dip"/>
+
+    </LinearLayout>
+</ScrollView>

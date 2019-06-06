@@ -1,0 +1,156 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white">
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin">
+
+            <com.smartfarming.screenrender.view.CustomFontTextView
+                    android:id="@+id/tvPestName"
+                    style="@style/HTMLTitleTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="[Name Pest]"/>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:orientation="horizontal">
+
+                <TextView
+                        android:id="@+id/tvImportance"
+                        style="@style/HTMLTitleTextStyleBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Importantce:"/>
+
+                <TextView
+                        android:id="@+id/tvMajorOrModerate"
+                        style="@style/HTMLTitleTextStyleBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:text="Major/Moderate"
+                        android:textColor="@color/orange"/>
+
+            </LinearLayout>
+
+
+            <com.smartfarming.screenrender.view.CustomFontTextView
+                    android:id="@+id/tvFileText"
+                    style="@style/HTMLDescriptionTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text=""/>
+
+
+            <TextView
+                    android:id="@+id/tvMonitoringAdvice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    style="@style/HTMLTitleTextStyleBold"
+                    android:text="Monitoring Advice"/>
+
+            <com.smartfarming.screenrender.view.CustomFontTextView
+                    android:id="@+id/tvPestSpecificAdvice"
+                    style="@style/HTMLDescriptionTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:text=""/>
+
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+
+                <ImageView
+                        android:id="@+id/ivImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/image_size"
+                        android:visibility="visible"/>
+
+
+                <com.smartfarming.screenrender.view.CustomFontTextView
+                        android:id="@+id/tvPestQuestion"
+                        style="@style/HTMLDescriptionTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text=""/>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                    <android.support.v7.widget.AppCompatButton
+                            android:id="@+id/btnLeft"
+                            style="@style/QuestionButtonStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="30dp"
+                            android:background="@color/colorRed"
+                            android:padding="10dp"
+                            android:text=""/>
+
+                    <android.support.v7.widget.AppCompatButton
+                            android:id="@+id/btnCenter"
+                            style="@style/QuestionButtonStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:background="@color/yellow"
+                            android:text="Not sure\nmore info"
+                            android:visibility="gone"/>
+
+                    <android.support.v7.widget.AppCompatButton
+                            android:id="@+id/btnRight"
+                            style="@style/QuestionButtonStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:background="@color/colorGreen"
+                            android:padding="10dp"
+                            android:text=""/>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>

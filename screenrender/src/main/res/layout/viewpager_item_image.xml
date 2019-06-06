@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <ImageView
+            android:id="@+id/iv_viewpager_item"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/image_size"
+            android:visibility="visible"/>
+
+
+    <!--<uk.co.senab.photoview.PhotoView
+        android:id="@+id/iv_viewpager_item"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/ic_default" />
+-->
+    <com.smartfarming.screenrender.view.CustomFontTextView
+            android:id="@+id/tvPestname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/colorLightGreyText"
+            android:textSize="14sp"/>
+
+</LinearLayout>

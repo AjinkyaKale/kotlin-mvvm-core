@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="white">#ffffff</color>
+    <color name="colorPrimary">#089c81</color>
+
+    <color name="colorTextPrimary">#ffffff</color>
+
+    <!--Personal Info  -->
+    <color name="colorDarkGrey">#505050</color>
+    <color name="colorLightGrey">#E0E0E0</color>
+    <color name="colorLightGreyText">#909090</color>
+    <color name="colorDarkGreyText">#242424</color>
+    <color name="colorRed">#f95454</color>
+    <color name="colorGreen">#92e14f</color>
+    <color name="tab_background_selected">#ffe51d</color>
+    <color name="orange">#FFA500</color>
+
+    <color name="pink">#f1a4df</color>
+    <color name="yellow">#e9dd3a</color>
+    <color name="brown">#c16b4f</color>
+    <color name="blue">#64b6ed</color>
+    <color name="dark_yellow">#c3c638</color>
+    <color name="dark_orange">#ec6538</color>
+    <color name="purple">#314fbf</color>
+
+    <color name="grey">#b0b0b0</color>
+    <color name="faint_yellow">#ffff7f</color>
+
+    <color name="faint_red">#ff9999</color>
+    <color name="faint_green">#ccffcc</color>
+</resources>
