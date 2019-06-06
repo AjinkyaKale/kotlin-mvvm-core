@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">ScreenRender</string>
+
+    <!--default text-->
+    <string name="something_wrong">Something wen\'t wrong !!!</string>
+
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="leave_comment">Leave a comment \nor suggestion</string>
+    <string name="no_internet">No Internet connection</string>
+    <string name="image_download_fail">Image downloading failed</string>
+    <string name="home">Home</string>
+
+
+    <!--Pre-sowing-->
+    <string name="pre_sowing_choose_your_variety">Choose your variety</string>
+    <string name="pre_sowing_seed_potato_handling">Seed potato handling</string>
+    <string name="pre_sowing_farm_layout">Farm layout</string>
+    <string name="pre_sowing_land_preparation">Land preparation and Planting</string>
+    <string name="pre_sowing_spacing">Spacing</string>
+    <string name="pre_sowing_title">Pre-sowing</string>
+
+</resources>

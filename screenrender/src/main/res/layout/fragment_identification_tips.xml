@@ -1,0 +1,38 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:CustomFont="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:fillViewport="true">
+
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <include
+                android:id="@+id/include"
+                layout="@layout/layout_pager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></include>
+
+
+        <TextView
+                android:id="@+id/tvDescription"
+                style="@style/HTMLDescriptionTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/include"
+                CustomFont:fontName="mangal.ttf"/>
+
+        <Button
+                android:id="@+id/btn"
+                style="@style/ButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvDescription"
+                android:layout_marginTop="20dp"/>
+
+    </RelativeLayout>
+
+</ScrollView>

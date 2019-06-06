@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" android:weightSum="1" >
+
+    <com.smartfarming.screenrender.view.CustomViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"  />
+
+    <com.viewpagerindicator.CirclePageIndicator
+        android:id="@+id/circle_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/vp_imagedescription"
+        android:layout_marginTop="5dp"
+        app:fillColor="#ff07846d"
+        app:pageColor="#ff000000"
+        app:radius="4dp"
+        app:strokeColor="#FFFFFFFF" />
+
+
+</LinearLayout>-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" android:weightSum="1">
+
+    <com.smartfarming.screenrender.view.CustomViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <com.viewpagerindicator.CirclePageIndicator
+            android:id="@+id/circle_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view_pager"
+            android:layout_marginTop="5dp"
+            app:fillColor="#ff07846d"
+            app:pageColor="#ff000000"
+            app:radius="4dp"
+            app:strokeColor="#FFFFFFFF"/>
+
+    <ImageView
+            android:id="@+id/img_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_right"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/>
+
+    <ImageView
+            android:id="@+id/img_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_left"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"/>
+
+
+</RelativeLayout>

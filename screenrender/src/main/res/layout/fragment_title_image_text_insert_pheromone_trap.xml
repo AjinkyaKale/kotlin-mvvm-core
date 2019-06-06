@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="vertical" android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+        <TextView
+                android:id="@+id/tvTitle"
+                style="@style/HTMLDescriptionTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/include"
+                android:gravity="left"
+                android:text=""/>
+
+
+        <TextView
+                android:id="@+id/tvDescription_one"
+                style="@style/HTMLDescriptionTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/include"
+                android:gravity="center_vertical"
+                android:text=""/>
+
+
+        <include
+                android:id="@+id/include"
+                layout="@layout/layout_pager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></include>
+
+        <TextView
+                android:id="@+id/tvDescription_two"
+                style="@style/HTMLDescriptionTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/include"
+                android:gravity="center_vertical"
+                android:text=""/>
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/btn_change_date"
+                    style="@style/ButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvDescription"
+                    android:layout_marginTop="20dp"
+                    android:layout_alignParentRight="true"/>
+
+            <TextView
+                    android:id="@+id/tv_date_description"
+                    style="@style/HTMLDescriptionTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_alignTop="@id/btn_change_date"
+                    android:layout_alignBottom="@id/btn_change_date"
+                    android:layout_toLeftOf="@id/btn_change_date"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</ScrollView>

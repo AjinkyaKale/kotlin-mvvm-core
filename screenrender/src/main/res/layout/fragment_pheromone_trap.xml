@@ -1,0 +1,131 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:orientation="vertical">
+
+        <com.smartfarming.screenrender.view.CustomFontTextView
+                android:id="@+id/tvPheromoneTrap"
+                style="@style/HTMLTitleTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingBottom="5dp"
+                android:text=""
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+        <com.smartfarming.screenrender.view.CustomFontTextView
+                android:id="@+id/tvPestName"
+                style="@style/HTMLTitleTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingBottom="5dp"
+                android:text=""
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+        <include
+                android:id="@+id/include"
+                layout="@layout/layout_pager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        <com.smartfarming.screenrender.view.CustomFontTextView
+                android:id="@+id/tvDescription"
+                style="@style/HTMLTitleTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingBottom="5dp"
+                android:text=""
+                android:textSize="16sp"/>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:orientation="horizontal">
+
+
+            <com.smartfarming.screenrender.view.CustomFontTextView
+                    android:id="@+id/tvPheromoneTrapPlaced"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    style="@style/HTMLDescriptionTextStyle"
+                    android:text=""
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="0.7"/>
+
+            <!--<com.smartfarming.screenrender.view.CustomFontTextView
+                android:id="@+id/tvPheromoneTrapPlaced"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/HTMLDescriptionTextStyle"
+                android:text=""
+                android:gravity="center_vertical"
+                android:layout_toLeftOf="@+id/btnInsertTrap"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignLeft="@+id/btnInsertTrap"
+                android:layout_alignParentStart="true" />-->
+
+
+            <Button
+                    android:id="@+id/btnInsertTrap"
+                    style="@style/ButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="10dp"
+                    android:text=""/>
+
+        </LinearLayout>
+
+        <com.smartfarming.screenrender.view.CustomFontTextView
+                android:id="@+id/tvLuresPlaced"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/HTMLDescriptionTextStyle"
+                android:text=""
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center_vertical"/>
+
+
+        <!-- <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:weightSum="1"
+             android:orientation="horizontal"
+             android:layout_marginBottom="30dp" >
+
+             <com.smartfarming.screenrender.view.CustomFontTextView
+                 android:id="@+id/tvLuresPlaced"
+                 android:layout_width="0dp"
+                 android:layout_height="match_parent"
+                 android:layout_weight="0.75"
+                 style="@style/HTMLDescriptionTextStyle"
+                 android:text=""
+                 android:gravity="center_vertical" />
+
+             <ImageView
+                 android:id="@+id/ivInsertLures"
+                 android:layout_width="0dp"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="0.2"
+                 android:src="@drawable/ic_add_lures_date" />
+
+         </LinearLayout>-->
+
+    </LinearLayout>
+
+</ScrollView>
