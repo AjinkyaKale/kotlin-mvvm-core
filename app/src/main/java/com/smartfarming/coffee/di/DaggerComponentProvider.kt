@@ -3,8 +3,8 @@ package com.smartfarming.coffee.di
 import com.ee.core.application.CoreApp
 import com.smartfarming.coffee.di.component.AppComponent
 import com.smartfarming.coffee.di.component.DaggerAppComponent
-import com.smartfarming.coffee.di.component.DaggerSplashComponent
 import com.smartfarming.coffee.di.component.SplashComponent
+import com.smartfarming.coffee.di.module.SplashModule
 import javax.inject.Singleton
 
 @Singleton
@@ -21,7 +21,7 @@ object DaggerComponentProvider {
 
     fun splashComponent(): SplashComponent {
         if (mSplashComponent == null)
-            mSplashComponent = DaggerSplashComponent.builder().build()
+            mSplashComponent = mAppComponent!!.addSplashComponent(SplashModule())
         return mSplashComponent as SplashComponent
     }
 

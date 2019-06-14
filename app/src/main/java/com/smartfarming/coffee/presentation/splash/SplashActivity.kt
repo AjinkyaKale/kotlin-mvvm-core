@@ -1,26 +1,29 @@
 package com.smartfarming.coffee.presentation.splash
 
+import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProviders
-import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
-import android.os.Handler
 import android.support.v7.app.AppCompatActivity
+import android.view.View
+import com.ee.core.networking.Outcome
+import com.smartfarming.coffee.BuildConfig
 import com.smartfarming.coffee.R
+import com.smartfarming.coffee.common.PreferenceHelper
+import com.smartfarming.coffee.data.remote.model.request.TokenRequest
+import com.smartfarming.coffee.data.remote.model.response.TokenResponse
 import com.smartfarming.coffee.di.DaggerComponentProvider
-import com.smartfarming.coffee.presentation.login.RegistrationActivity
 import javax.inject.Inject
 
 class SplashActivity : AppCompatActivity() {
 
-    private var mDelayHandler: Handler? = null
-
     private val mComponent by lazy { DaggerComponentProvider.splashComponent() }
 
     @Inject
-    lateinit var mViewModelFactory: SplashViewModelFactory
+    lateinit var mSharedPreferences: SharedPreferences
 
     private val mViewModel: SplashViewModel by lazy {
-        ViewModelProviders.of(this, mViewModelFactory).get(SplashViewModel::class.java)
+        ViewModelProviders.of(this).get(SplashViewModel::class.java)
     }
 
 
@@ -30,22 +33,52 @@ class SplashActivity : AppCompatActivity() {
 
         mComponent.inject(this)
 
-        openScreen()
+        setFullScreenView()
+
+        initObserver()
+
+        if (mSharedPreferences.getBoolean(PreferenceHelper.PREF_IS_USER_REGISTERED, false)) {
+            //Todo
+        } else {
+            getAccessToken()
+        }
     }
 
-    /**
-     * Function with Handler to delay the splash
-     */
-    fun openScreen() {
+    private fun getAccessToken() {
+        val tokenRequestModel = TokenRequest(BuildConfig.CLIENT_ID, BuildConfig.CLIENT_SECRET)
 
-        Handler().postDelayed(
-            {
+        mViewModel.getAccessToken(tokenRequestModel)
+    }
 
-                startActivity(Intent(this, RegistrationActivity::class.java))
-                finish()
+    private fun initObserver() {
 
-            }, mViewModel.time
-        )
+        initAccessTokenResponseObserver()
+    }
+
+    private fun initAccessTokenResponseObserver() {
+
+        mViewModel.mAccessTokenResponse.observe(this, Observer<Outcome<TokenResponse>> { outcome ->
+
+            when (outcome) {
+
+                is Outcome.Progress -> {
+
+                }
+
+                is Outcome.Success -> {
+
+                }
+
+                is Outcome.Failure -> {
+
+                }
+            }
+        })
+    }
+
+    private fun setFullScreenView() {
+        val decorView = window.decorView
+        decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
     }
 
 

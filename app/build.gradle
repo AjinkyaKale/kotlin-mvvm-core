@@ -21,6 +21,8 @@ android {
             testCoverageEnabled true
             debuggable true
             buildConfigField 'String', 'BASE_URL', BASE_URL_DEBUG_SBX
+            buildConfigField "int", "CLIENT_ID", "2"
+            buildConfigField "String", "CLIENT_SECRET", '"kioE7AHEXqj7HQxFOoBGPFghmyq8mp04jC445rA7"'
         }
         staging {
             debuggable true

@@ -3,7 +3,5 @@ package com.smartfarming.coffee.common
 
 object Constants {
 
-    const val DEBUG = "debug"
-    const val STAGING = "staging"
-    const val RELEASE = "release"
+    const val EXCEPTION_NOT_YET_IMPLEMENTED = "Not yet implemented"
 }
