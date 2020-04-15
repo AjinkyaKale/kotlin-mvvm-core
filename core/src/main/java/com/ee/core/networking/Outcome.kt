@@ -1,7 +1,7 @@
 package com.ee.core.networking
 
 /**
- * Created by karn on 18/1/18.
+ * Created by ajinkya on 13/04/20.
  */
 sealed class Outcome<T> {
     data class Progress<T>(var loading: Boolean) : Outcome<T>()

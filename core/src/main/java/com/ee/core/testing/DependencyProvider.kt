@@ -1,7 +1,7 @@
 package com.ee.core.testing
 
 import android.annotation.SuppressLint
-import android.support.annotation.VisibleForTesting
+import androidx.annotation.VisibleForTesting
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import okhttp3.HttpUrl
 import okhttp3.OkHttpClient
@@ -44,7 +44,7 @@ object DependencyProvider {
     @SuppressLint("NewApi")
     fun getResponseFromJson(fileName: String): String {
         val inputStream = javaClass.classLoader
-            .getResourceAsStream("api-response/$fileName.json")
+            ?.getResourceAsStream("api-response/$fileName.json")
         val source = Okio.buffer(Okio.source(inputStream))
         return source.readString(StandardCharsets.UTF_8)
     }
