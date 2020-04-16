@@ -78,13 +78,13 @@ class LoginActivity : BaseActivity() {
                 is Outcome.Success -> {
                     cancelProgressDialog()
                     saveLoginDataToSharedPref(outcome.data)
-                    showSnackBar("Login Successful !")
+                    showSnackBar("Login successful !")
                     launchNextScreen()
                 }
 
                 is Outcome.Failure -> {
                     cancelProgressDialog()
-                    toast("Something went wrong, please try again!")
+                    showSnackBar("User does not exist !")
                 }
             }
         })
