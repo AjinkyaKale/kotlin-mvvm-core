@@ -1,16 +1,19 @@
-1. Kotlin Basics Advantages over Java
+1. Kotlin Basics
+
+Advantages over Java
 - Kotlin is more concise
 - Kotlin code is safer
 - Kotlin speeds up every-day development tasks
 - The code base shrinks and increases in quality
- Features
+
+Features
 - Null Safety
 - Extension Functions
 - Smart Casts
 - Range Expressions
 - Companion Objects
 - Primary Constructors
-- Data Classes 
+- Data Classes
 ———————————————————————————————————————————————————
 
 2. MVVM Architecture
@@ -18,25 +21,39 @@ MVVM is one of the architectural patterns which enhances separation of concer
 
 Advantages of MVVM are Maintainability, Testability, Extensibility
 
-MVVM uses data binding and is therefore a more event driven architecture. MVP typically has a one to one mapping between the presenter and the view, while MVVM can map many views to one view model In MVVM the view model has no reference to the view, while in MVP the view knows the presenter. Presenter holds a strong reference to view.
+MVVM uses data binding and is therefore a more event driven architecture. 
+MVP typically has a one to one mapping between the presenter and the view, while MVVM can map many views to one view model
+In MVVM the view model has no reference to the view, while in MVP the view knows the presenter. Presenter holds a strong reference to view.
 
 Disadvantages
 * Some people think that for simple UIs, MVVM can be overkill.
-* Similarly in bigger cases, it can be hard to design the ViewModel.
 * Debugging would be bit difficult when we have complex data bindings.
- 3. LiveData
-As I said earlier, LiveData is one of the newly introduced architecture components. LiveData is an observable data holder class. Unlike a regular observable, LiveData is lifecycle-aware, meaning it respects the lifecycle of other app components, such as activities, fragments, or services. This awareness ensures LiveData only updates app component observers that are in an active lifecycle state.
+
+3. LiveData
+As I said earlier, LiveData is one of the newly introduced architecture components. 
+LiveData is an observable data holder class. Unlike a regular observable, LiveData is lifecycle-aware, meaning it respects the lifecycle of other app components, such as activities, fragments, or services. This awareness ensures LiveData only updates app component observers that are in an active lifecycle state.
 
 4 . ViewModel
 Basically view models are responsible for preparing the data for the UI/View. It survives the configuration changes. For example if we rotate a device from portrait to landscape then these objects
 
 
 5.  Dagger2
-Dependency Injection, or DI in short, is a design pattern that allows to delegate the creation of objects and there dependencies to another object or framework. It based on the principle that, you should not create the dependencies yourself, instead you should always ask for the dependencies. I saw a beautiful example on the web which explains Dependency Injection in a quite beautiful manner.
+Dependency Injection, or DI in short, is a design pattern that allows to delegate the creation of objects and there dependencies to another object or framework.
+It based on the principle that, you should not create the dependencies yourself, instead you should always ask for the dependencies.
+I saw a beautiful example on the web which explains Dependency Injection in a quite beautiful manner.
 
 Let's imagine that if we want to go for fishing: So there will be two different scenario’s
-* One Without dependency injection, you need to take care of everything yourself. You need to find a boat, to buy a fishing rod, to look for bait, etc. It's possible, of course, but it puts a lot of responsibility on you. In software terms, it means that you have to perform a lookup for all these things. 
-* And the other with dependency injection, someone else takes care of all the preparation and makes the required equipment available to you. You will receive ("be injected") the boat, the fishing rod and the bait - all ready to use. 
+* One Without dependency injection, you need to take care of everything yourself. you need to find a boat, to buy a fishing rod, and other equipments, etc.
+It's possible, of course, but it puts a lot of responsibility on you. In software terms, it means that you have to perform a lookup for all these things.
+* And the other with dependency injection, someone else takes care of all the preparation and makes the required equipment available to you. We will receive ("be injected") the boat, the fishing rod and the bait - all ready to use. 
+
+
+Search Results
+Featured snippet from the web
+Inversion of control states that it should not build its dependencies but rather, some class outside of it.
+Dagger for Android addresses both of these concerns by introducing android framework type injectors and additional annotations.
+
+
 
 6. RxAndroid
 Reactive programming is not just another API. It’s a whole new programming paradigm concerned with data streams and the propagation of change.
@@ -74,7 +91,9 @@ For instance, in a movies App, it could be the Movie class, the Subtitle cla
 
 
 4. Data
-In this layer, you have an abstract definition of the different data sources, and how they should be used. Here, you will normally use a repository pattern that, for a given request, it’s able to decide where to find the information.
+In this layer, you have an abstract definition of the different data sources, and how they should be used.
+Here, you will normally use a repository pattern that, for a given request, it’s able to decide where to find the information.
 
 5. Framework
-You can find this layer called in many different ways. It basically encapsulates the interaction with the framework
+You can find this layer called in many different ways. It basically encapsulates the interaction with the framework.
+Implements interaction with the Android SDK and provides concrete implementations for the data layer.
