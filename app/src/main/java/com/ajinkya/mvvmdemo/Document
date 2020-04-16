@@ -1,0 +1,80 @@
+1. Kotlin Basics Advantages over Java
+- Kotlin is more concise
+- Kotlin code is safer
+- Kotlin speeds up every-day development tasks
+- The code base shrinks and increases in quality
+ Features
+- Null Safety
+- Extension Functions
+- Smart Casts
+- Range Expressions
+- Companion Objects
+- Primary Constructors
+- Data Classes 
+———————————————————————————————————————————————————
+
+2. MVVM Architecture
+MVVM is one of the architectural patterns which enhances separation of concerns, it allows separating the user interface logic from the business (or the back-end) logic. ... Finally, the view role in this pattern is to observe (or subscribe to) a ViewModel observable to get data in order to update UI elements accordingly.
+
+Advantages of MVVM are Maintainability, Testability, Extensibility
+
+MVVM uses data binding and is therefore a more event driven architecture. MVP typically has a one to one mapping between the presenter and the view, while MVVM can map many views to one view model In MVVM the view model has no reference to the view, while in MVP the view knows the presenter. Presenter holds a strong reference to view.
+
+Disadvantages
+* Some people think that for simple UIs, MVVM can be overkill.
+* Similarly in bigger cases, it can be hard to design the ViewModel.
+* Debugging would be bit difficult when we have complex data bindings.
+ 3. LiveData
+As I said earlier, LiveData is one of the newly introduced architecture components. LiveData is an observable data holder class. Unlike a regular observable, LiveData is lifecycle-aware, meaning it respects the lifecycle of other app components, such as activities, fragments, or services. This awareness ensures LiveData only updates app component observers that are in an active lifecycle state.
+
+4 . ViewModel
+Basically view models are responsible for preparing the data for the UI/View. It survives the configuration changes. For example if we rotate a device from portrait to landscape then these objects
+
+
+5.  Dagger2
+Dependency Injection, or DI in short, is a design pattern that allows to delegate the creation of objects and there dependencies to another object or framework. It based on the principle that, you should not create the dependencies yourself, instead you should always ask for the dependencies. I saw a beautiful example on the web which explains Dependency Injection in a quite beautiful manner.
+
+Let's imagine that if we want to go for fishing: So there will be two different scenario’s
+* One Without dependency injection, you need to take care of everything yourself. You need to find a boat, to buy a fishing rod, to look for bait, etc. It's possible, of course, but it puts a lot of responsibility on you. In software terms, it means that you have to perform a lookup for all these things. 
+* And the other with dependency injection, someone else takes care of all the preparation and makes the required equipment available to you. You will receive ("be injected") the boat, the fishing rod and the bait - all ready to use. 
+
+6. RxAndroid
+Reactive programming is not just another API. It’s a whole new programming paradigm concerned with data streams and the propagation of change.
+
+What is Reactive Programming?
+In imperative programming, an expression is evaluated once and the value is assigned to a variable:
+var x = 2
+var y = 3
+var z = x * y // z is 6
+
+x = 10
+// z is still 6
+
+On the other hand, reactive programming is all about responding to value changes.
+
+
+7. Clean Architecture
+
+Clean architecture: why should I care?
+Even if you decide not to use architectures in your Apps, I think that learning them is really interesting, because they will help us understand important programming and OOP concepts.
+
+Architectures allow decoupling different units of your code in an organized manner. That way the code gets easier to understand, modify and test.
+
+Layers of Clean Architecture
+1. Presentation
+This presentation layer usually consists of Android UI (activities, fragments, views) and presenters or view models.
+
+2. Use cases
+It’s usually called interactors too. These are mainly the actions that the user can trigger. 
+
+3. Domain
+Also known as business logic. These are the rules of your business.
+This are nothing but our data classes or POJO classes in Java term, which holds the data
+For instance, in a movies App, it could be the Movie class, the Subtitle class, etc.
+
+
+4. Data
+In this layer, you have an abstract definition of the different data sources, and how they should be used. Here, you will normally use a repository pattern that, for a given request, it’s able to decide where to find the information.
+
+5. Framework
+You can find this layer called in many different ways. It basically encapsulates the interaction with the framework
